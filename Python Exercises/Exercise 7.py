@@ -26,9 +26,26 @@ if answer.lower() == "1":
             print("Opción 2: Explorar más la cueva en busca de pistas adicionales.")
             answer = input("Elije una opción: ")
             if answer.lower() == "1":
-                print("Continuara...")
+                print("El cofre del tesoro")
+                print("Tomaste el cofre lleno de tesoros y regresaste al pueblo. Has encontrado suficiente riqueza para vivir cómodamente el resto de tu vida. Tu aventura en la isla ha sido un éxito.")
+                print("¡Felicidades, has completado tu aventura con éxito!")
             elif answer.lower() == "2":
-                print("Continuará...")
+                print("Exploración adicional de la cueva")
+                print("Decides explorar más la cueva en busca de pistas adicionales. Te adentras más en la oscuridad y encuentras un túnel misterioso que se adentra en las profundidades de la isla.")
+                print("Opción 1: Seguir el túnel y descubrir a dónde lleva.")
+                print("Opción 2: Retroceder y salir de la cueva.")
+                answer = input("Elije una opción: ")
+                if answer.lower() == "1":
+                    print("Seguir el túnel")
+                    print("Decides seguir el túnel y descubres que conduce a una cámara subterránea llena de tesoros. Parece que has encontrado el tesoro más grande de todos.")
+                    print("Felicidades, tu aventura ha llegado a su emocionante final.")
+                elif answer.lower() == "2":
+                    print("Retroceso sabio")
+                    print("Decides retroceder y salir de la cueva. Mientras sales, encuentras un mapa antiguo que muestra la ubicación de varios tesoros en la isla.")
+                    print("Opción 1: Seguir las pistas del mapa hacia el tesoro.")
+                    print("Opción 2: Regresar al pueblo y compartir el mapa con otros.")
+                    #bookmark here
+                else:
             else:
                 print("Perdiste")
         elif answer.lower() == "2":
@@ -153,3 +170,7 @@ elif answer.lower() == "2":
         print("Perdiste")
 else: 
     print("Perdiste")
+
+
+
+#tratar de hacer una interfaz gráfica
