@@ -44,7 +44,16 @@ if answer.lower() == "1":
                     print("Decides retroceder y salir de la cueva. Mientras sales, encuentras un mapa antiguo que muestra la ubicación de varios tesoros en la isla.")
                     print("Opción 1: Seguir las pistas del mapa hacia el tesoro.")
                     print("Opción 2: Regresar al pueblo y compartir el mapa con otros.")
-                    #bookmark here
+                    if answer.lower() == "1":
+                        print("Seguir las pistas del mapa")
+                        print("Decides seguir las pistas del mapa hacia el tesoro mencionado. Después de una búsqueda ardua, encuentras el tesoro escondido en una isla cercana.")
+                        print("Felicidades, has completado tu aventura con éxito.")
+                    elif answer.lower() == "2":
+                        print("Regresar al pueblo")
+                        print("Regresas al pueblo y compartes el mapa con otros. Juntos, forman un equipo de búsqueda y encuentran el tesoro escondido en la isla.")
+                        print("Felicidades, has completado tu aventura con éxito.")
+                    else:
+                        print("Perdiste")
                 else:
                     print("Perdiste")
             else:
@@ -56,7 +65,17 @@ if answer.lower() == "1":
             print("Opción 2: Ignorar la piedra y seguir explorando.")
             answer = input("Elije una opción: ")
             if answer.lower() == "1":
-                print("Continuara...")
+                print("Descifrar las inscripciones")
+                print("Te esfuerzas por descifrar las inscripciones en la piedra tallada. Después de un tiempo, logras entender que indican la ubicación de un antiguo templo en la isla. Decides buscar este templo en busca de tesoros ocultos.")
+                print("Opción 1: Ir en busca del antiguo templo.")
+                print("Opción 2: Continuar explorando la selva en busca de pistas adicionales.")
+                answer = input("Elije una opción: ")
+                if answer.lower() == "1":
+                    print("Continuara")
+                elif anwer.lower() == "2":
+                    print("Continuara")
+                else:
+                    print("Perdiste")
             elif answer.lower() == "2":
                 print("Continuará...")
             else:
