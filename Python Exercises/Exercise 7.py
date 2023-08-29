@@ -46,6 +46,7 @@ if answer.lower() == "1":
                     print("Opción 2: Regresar al pueblo y compartir el mapa con otros.")
                     #bookmark here
                 else:
+                    print("Perdiste")
             else:
                 print("Perdiste")
         elif answer.lower() == "2":
@@ -95,6 +96,8 @@ if answer.lower() == "1":
             print("Perdiste")
     else: 
         print("Perdiste")
+
+
 elif answer.lower() == "2":
     print("Búsqueda de un guía")
     print("Buscas a un guía local que conozca la isla. Encuentras a un anciano llamado Miguel, quien accede a ayudarte a cambio de una pequeña suma de dinero. Juntos, comienzan la exploración de la isla.")
