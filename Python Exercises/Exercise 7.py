@@ -72,7 +72,7 @@ if answer.lower() == "1":
                 answer = input("Elije una opción: ")
                 if answer.lower() == "1":
                     print("Continuara")
-                elif anwer.lower() == "2":
+                elif answer.lower() == "2":
                     print("Continuara")
                 else:
                     print("Perdiste")
@@ -149,9 +149,36 @@ elif answer.lower() == "2":
             print("Opción 2: Dejar el diario y tomar algunos tesoros antes de irte.")
             answer = input("Elije una opción: ")
             if answer.lower() == "1":
-                print("Continuará...")
+                print("Leer el diario")
+                print("Decides leer el diario y buscas pistas adicionales. El diario te lleva a un punto específico en la isla donde se dice que se encuentra un tesoro perdido. Decides seguir las pistas y buscar el tesoro.")
+                print("Opción 1: Seguir las pistas del diario hacia el tesoro.")
+                print("Opción 2: Regresar al pueblo y buscar ayuda para encontrar el tesoro.")
+                answer = input("Elije una opción: ")
+                if answer.lower() == "1":
+                    print("Seguir las pistas del diario")
+                    print("Decides seguir las pistas del diario hacia el tesoro. Después de una búsqueda ardua, encuentras el tesoro mencionado y te conviertes en una leyenda local.")
+                    print("Felicidades, has completado tu aventura con éxito.")
+                elif answer.lower() == "2":
+                    print("Buscar ayuda")
+                    print("Regresas al pueblo y compartes el mapa con otros. Juntos, forman un equipo de búsqueda y encuentran el tesoro escondido en la isla.")
+                    print("Felicidades, has completado tu aventura con éxito.")
+                else:
+                    print("Perdiste")
             elif answer.lower() == "2":
-                print("Continuará")
+                print("Tomar algunos tesoros")
+                print("Decides tomar algunos tesoros antes de irte de la habitación. Mientras lo haces, escuchas el ruido siniestro de antes acercándose rápidamente.")
+                print("Opción 1: Dejar los tesoros y buscar una salida.")
+                print("Opción 2: Continuar tomando tesoros y arriesgarte.")
+                if answer.lower() == "1":
+                    print("Continuar tomando tesoros")
+                    print("Decides continuar tomando tesoros a pesar del ruido siniestro que se acerca. De repente, quedas atrapado en una trampa y tu aventura llega a un final abrupto.")
+                    print("Lamentablemente, tu aventura ha llegado a su fin.")
+                elif answer.lower() == "2":
+                    print("Riesgo final")
+                    print("Continúas tomando tesoros a pesar del peligro que se avecina. De repente, una criatura antigua despierta y pone fin a tu búsqueda de tesoros.")
+                    print("Lamentablemente, tu aventura ha llegado a su fin.")
+                else:
+                    print("Perdiste")
             else:
                 print("Perdiste")
         else:
