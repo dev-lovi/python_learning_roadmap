@@ -71,9 +71,24 @@ if answer.lower() == "1":
                 print("Opción 2: Continuar explorando la selva en busca de pistas adicionales.")
                 answer = input("Elije una opción: ")
                 if answer.lower() == "1":
-                    print("Continuara")
+                    print("En busca del antiguo templo")
+                    print("Decides buscar el antiguo templo mencionado en las inscripciones. Sigues las indicaciones de la piedra tallada y finalmente llegas al templo. Dentro del templo, encuentras un tesoro antiguo y valioso.")
+                    print("Felicidades, has completado tu aventura con éxito.")
                 elif answer.lower() == "2":
-                    print("Continuara")
+                    print("Explorar más la selva")
+                    print("Optas por explorar más la selva en busca de pistas adicionales. Después de un tiempo, encuentras un conjunto de antiguas estatuas que te guían hacia un río subterráneo.")
+                    print("Opción 1: Seguir el río subterráneo en busca de un tesoro.")
+                    print("Opción 2: Regresar al pueblo y compartir tus descubrimientos.")
+                    if answer.lower() == "1":
+                        print("Seguir el río subterráneo")
+                        print("Sigues el río subterráneo en busca de un tesoro. Después de un tiempo, llegas a una cámara subterránea llena de tesoros y artefactos antiguos.")
+                        print("Felicidades, has completado tu aventura con éxito.")
+                    elif answer.lower() == "2":
+                        print("Compartir tus descubrimientos")
+                        print("Regresas al pueblo y compartes tus descubrimientos con otros. Tu historia se convierte en una leyenda local y tu nombre se asocia con la búsqueda de tesoros.")
+                        print("Felicidades, has completado tu aventura con éxito.")
+                    else:
+                        print("Perdiste")
                 else:
                     print("Perdiste")
             elif answer.lower() == "2":
