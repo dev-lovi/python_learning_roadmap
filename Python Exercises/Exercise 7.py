@@ -4,8 +4,8 @@ print("Tú eres el protagonista y tomarás decisiones clave en la historia. ¡Bu
 
 print("Estás de vacaciones en un tranquilo pueblo costero cuando escuchas un rumor intrigante sobre una isla cercana. Se dice que esta isla está llena de tesoros ocultos y misterios sin resolver. Decides embarcarte en una aventura y visitar la isla.")
 
-print("Opción 1: Tratar de comunicarte con la criatura.")
-print("Opción 2: Retroceder lentamente y buscar otro camino.")
+print("Opción 1: Tomar un bote y explorar la isla por ti mismo.")
+print("Opción 2: Buscar a un guía local que conozca la isla.")
 answer = input("Elije una opción: ")
 if answer.lower() == "1":
     print("Exploración solitaria")
@@ -184,6 +184,7 @@ elif answer.lower() == "2":
                 print("Decides tomar algunos tesoros antes de irte de la habitación. Mientras lo haces, escuchas el ruido siniestro de antes acercándose rápidamente.")
                 print("Opción 1: Dejar los tesoros y buscar una salida.")
                 print("Opción 2: Continuar tomando tesoros y arriesgarte.")
+                answer = input("Elije una opción: ")
                 if answer.lower() == "1":
                     print("Continuar tomando tesoros")
                     print("Decides continuar tomando tesoros a pesar del ruido siniestro que se acerca. De repente, quedas atrapado en una trampa y tu aventura llega a un final abrupto.")
