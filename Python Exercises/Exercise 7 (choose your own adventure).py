@@ -44,6 +44,7 @@ if answer.lower() == "1":
                     print("Decides retroceder y salir de la cueva. Mientras sales, encuentras un mapa antiguo que muestra la ubicación de varios tesoros en la isla.")
                     print("Opción 1: Seguir las pistas del mapa hacia el tesoro.")
                     print("Opción 2: Regresar al pueblo y compartir el mapa con otros.")
+                    answer = input("Elije una opción: ")
                     if answer.lower() == "1":
                         print("Seguir las pistas del mapa")
                         print("Decides seguir las pistas del mapa hacia el tesoro mencionado. Después de una búsqueda ardua, encuentras el tesoro escondido en una isla cercana.")
@@ -79,6 +80,7 @@ if answer.lower() == "1":
                     print("Optas por explorar más la selva en busca de pistas adicionales. Después de un tiempo, encuentras un conjunto de antiguas estatuas que te guían hacia un río subterráneo.")
                     print("Opción 1: Seguir el río subterráneo en busca de un tesoro.")
                     print("Opción 2: Regresar al pueblo y compartir tus descubrimientos.")
+                    answer = input("Elije una opción: ")
                     if answer.lower() == "1":
                         print("Seguir el río subterráneo")
                         print("Sigues el río subterráneo en busca de un tesoro. Después de un tiempo, llegas a una cámara subterránea llena de tesoros y artefactos antiguos.")
@@ -92,7 +94,21 @@ if answer.lower() == "1":
                 else:
                     print("Perdiste")
             elif answer.lower() == "2":
-                print("Continuará...")
+                print("Ignorar la piedra")
+                print("Decides ignorar la piedra tallada y continuar explorando la selva en busca de pistas adicionales. Después de un tiempo, te encuentras con un río que fluye hacia una cascada impresionante.")
+                print("Opción 1: Seguir el río aguas arriba en busca de un tesoro.")
+                print("Opción 2: Descender por la cascada en busca de una entrada secreta.")
+                answer = input("Elije una opción: ")
+                if answer.lower() == "1":
+                    print("Seguir el río aguas arriba")
+                    print("Sigues el río aguas arriba en busca de un tesoro. Después de un tiempo, encuentras una cueva oculta detrás de una cascada. Dentro de la cueva, encuentras un cofre lleno de gemas y monedas antiguas.")
+                    print("Felicidades, has completado tu aventura con éxito.")
+                elif answer.lower() == "2":
+                    print("Descender por la cascada")
+                    print("Decides descender por la cascada en busca de una entrada secreta. Al hacerlo, te sumerges en un túnel submarino que te lleva a una cámara submarina llena de tesoros hundidos.")
+                    print("Felicidades, has encontrado el tesoro y completado tu aventura con éxito.")
+                else:
+                    print("Perdiste")
             else:
                 print("Perdiste")
         else:
@@ -120,6 +136,7 @@ if answer.lower() == "1":
             print("Decides retroceder lentamente y buscar otro camino. Te alejas de la criatura sin molestarla y continúas explorando la selva. Encuentras un arroyo cristalino que te lleva a una playa desierta.")
             print("Opción 1: Explorar la playa en busca de tesoros.")
             print("Opción 2: Seguir el arroyo mar adentro en busca de una salida.")
+            answer = input("Elije una opción: ")
             if answer.lower() == "1":
                 print("Continuara...")
             elif answer.lower() == "2":
@@ -152,9 +169,26 @@ elif answer.lower() == "2":
             print("Opción 2: Dejar los tesoros y salir de la habitación rápidamente.")
             answer = input("Elije una opción: ")
             if answer.lower() == "1":
-                print("Continuará...")
+                print("Riesgo y recompensa")
+                print("Continúas recogiendo tesoros en la habitación a pesar del ruido siniestro que escuchaste antes. De repente, una trampa se activa y quedas atrapado en la habitación oscura.")
+                print("Opción 1: Intentar encontrar una salida.")
+                print("Opción 2: Gritar en busca de ayuda.")
+                answer = input("Elije una opción: ")
+                if answer.lower() == "1":
+                    print("En busca de una salida")
+                    print("Intentas encontrar una salida después de quedar atrapado en la habitación oscura. Después de un tiempo, encuentras una puerta secreta que te lleva a un pasadizo subterráneo que te lleva a la libertad.")
+                    print("Felicidades, has completado tu aventura con éxito.")
+                elif answer.lower() == "2":
+                    print("Gritar en busca de ayuda")
+                    print("Gritas en busca de ayuda y pronto escuchas a otros aventureros que te rescatan. Aunque no obtuviste tesoros, tu historia se convierte en una leyenda en el pueblo.")
+                    print("Felicidades, has completado tu aventura con éxito.")
+                else:
+                    print("Perdiste")
             elif answer.lower() == "2":
-                print("Continuará")
+                print("Salida rápida")
+                print("Decides dejar los tesoros y salir de la habitación rápidamente. Sales justo a tiempo antes de que la puerta se cierre detrás de ti. Aunque no obtuviste tesoros, has evitado un peligro desconocido.")
+                print("Opción 1: Continuar explorando la isla en busca de más pistas.")
+                print("Opción 2: Regresar al pueblo y contar tu experiencia.")
             else:
                 print("Perdiste")
         elif answer.lower() == "2":
@@ -205,6 +239,7 @@ elif answer.lower() == "2":
         print("Dentro de la habitación, encuentras un libro antiguo que contiene pistas sobre la ubicación de un tesoro aún más grande en la isla.")
         print("Opción 1: Tomar el libro y buscar el tesoro.")
         print("Opción 2: Salir de la habitación y seguir explorando la isla.")
+        answer = input("Elije una opción: ")
         if answer.lower() == "1":
             print("En busca del tesoro oculto")
             print("Decides tomar el libro antiguo y buscar el tesoro mencionado en él. El libro proporciona pistas detalladas que te llevan a una cueva subterránea. Dentro de la cueva, encuentras un cofre aún más grande y valioso.")
@@ -212,9 +247,13 @@ elif answer.lower() == "2":
             print("Opción 2: Ser cauto y salir de la cueva para buscar ayuda.")
             answer = input("Elije una opción: ")
             if answer.lower() == "1":
-                print("Continuará...")
+                print("El cofre del tesoro")
+                print("Abres el cofre dentro de la cueva subterránea y encuentras una increíble cantidad de riqueza y objetos antiguos. Tu vida está cambiando de manera significativa gracias a tu descubrimiento.")
+                print("Felicidades, has encontrado el tesoro y completado tu aventura con éxito.")
             elif answer.lower() == "2":
-                print("Continuará")
+                print("Búsqueda de ayuda")
+                print("Decides ser cauto y salir de la cueva para buscar ayuda. Regresas al pueblo y contratas a un equipo de expertos para explorar la cueva con seguridad. Juntos, encuentran el tesoro y te vuelves famoso por tu descubrimiento.")
+                print("Felicidades, has encontrado el tesoro y completado tu aventura con éxito.")
             else:
                 print("Perdiste")
         elif answer.lower() == "2":
@@ -224,9 +263,37 @@ elif answer.lower() == "2":
             print("Opción 2: Ignorar el camino y explorar otros lugares de la isla.")
             answer = input("Elije una opción: ")
             if answer.lower() == "1":
-                print("Continuará...")
+                print("El camino de piedras")
+                print("Sigues el camino de piedras hacia la montaña en el centro de la isla. En la cima, encuentras un altar antiguo con un objeto brillante encima de él.")
+                print("Opción 1: Tomar el objeto brillante.")
+                print("Opción 2: Investigar el altar con cuidado antes de tomar algo.")
+                answer = input("Elije una opción: ")
+                if answer.lower() == "1":
+                    print("Tomar el objeto brillante")
+                    print("Decides tomar el objeto brillante en la montaña. Al hacerlo, una luz deslumbrante te rodea y sientes una conexión profunda con la isla.")
+                    print("Felicidades, has completado tu aventura con éxito.")
+                elif answer.lower() == "2":
+                    print("Investigar el altar")
+                    print("Investigas el altar con cuidado antes de tomar algo. Descubres que el objeto brillante es en realidad una llave que encaja en una puerta antigua en la montaña.")
+                    print("Felicidades, has completado tu aventura con éxito.")
+                else:
+                    print("Perdiste")
             elif answer.lower() == "2":
-                print("Continuará")
+                print("Exploración continua")
+                print("Decides ignorar el camino de piedras y explorar otros lugares de la isla. Llegas a una playa escondida donde encuentras una botella con un mensaje dentro.")
+                print("Opción 1: Leer el mensaje.")
+                print("Opción 2: Continuar explorando la playa.")
+                answer = input("Elije una opción: ")
+                if answer.lower() == "1":
+                    print("Leer el mensaje")
+                    print("Decides leer el mensaje dentro de la botella y descubres una invitación a unirse a una sociedad secreta de aventureros. Tu vida toma un giro emocionante mientras te embarcas en una nueva aventura.")
+                    print("Felicidades, has completado tu aventura con éxito.")
+                elif answer.lower() == "2":
+                    print("Continuar explorando")
+                    print("Decides continuar explorando la playa en busca de más tesoros. Pronto encuentras una serie de joyas raras y antiguas que te hacen rico y famoso en todo el mundo.")
+                    print("Felicidades, has completado tu aventura con éxito.")
+                else:
+                    print("Perdiste")
             else:
                 print("Perdiste")
         else:
