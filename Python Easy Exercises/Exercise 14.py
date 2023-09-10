@@ -1,4 +1,3 @@
-
 nombre_archivo = "mi_listado.txt"
 
 def escribir_en_diario():
