@@ -3,7 +3,7 @@ from tkinter import ttk
 from tkinter import messagebox
 from random import shuffle
 from ttkthemes import ThemedStyle
-
+#make with chat gpt
 class FlashcardApp:
     def __init__(self, root):
         self.root = root
