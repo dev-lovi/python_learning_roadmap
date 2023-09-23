@@ -1,5 +1,7 @@
 #Ejercicio 14: Definir tres funciones llamadas convertir_a_dolar, convertir_a_euro y convertir_a_real. Cada función recibe un parámetro que representa un monto en pesos y devuelve su conversión respectiva.
 
+#OTRA FORMA DE HACERLO 
+
 def convertir_a_dolar():
     cantidad = int(input("Ingrese la cantidad de pesos (ARS): "))
     valor_peso = cantidad / 740
