@@ -2,9 +2,11 @@
 def imprimo_fecha(dia, mes, año):
     fecha = print(str(dia) + " de " + str(mes) + " de " + str(año))
     return fecha
-imprimo_fecha(21, "septiembre", 2021)
 
-def imprimo_fecha_segunda_forma():
-    fecha2 = print("21 de septiembre de 2021")
-    return fecha2
-imprimo_fecha_segunda_forma()
+variable_1 = input("Ingrese el día: ")
+varibale_2 = input("Ingrese el mes: ")
+varibale_3 = input("Ingrese el año: ")
+
+imprimo_fecha(variable_1, varibale_2, varibale_3)
+
+
