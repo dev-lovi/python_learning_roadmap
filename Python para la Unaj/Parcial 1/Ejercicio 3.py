@@ -7,6 +7,7 @@ def retorno_mensaje(valor):
     mensaje = print(valor)
     return mensaje
 
-retorno_mensaje("Aguante boca")
+retorno_mensaje("Estudiando mate 1 en la unaj")
+retorno_mensaje("Aguante boquita")
 
 
