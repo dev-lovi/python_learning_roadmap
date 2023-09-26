@@ -14,3 +14,15 @@
 #Definir dos condiciones que usen los datos de los productos, mostrando el resultado de combinar ambas condiciones en un operador lógico.
 #Resolver el mismo ejercicio pero ahora use listas o tuplas de acuerdo a su criterio. Recordar las diferentes formas de agregar elementos en una lista.
 
+def calculo_producto(nombre, cantidad, precio):
+    total = cantidad * precio
+    respuesta = print("Nombre: " + str(nombre) + " Precio: " + str(precio) + " Total gastado: " + str(total))
+    return respuesta
+
+
+pregunta_nombre = input("Ingrese el nombre del producto: ")
+pregunta_cantidad = int(input("Ingrese la cantidad: "))
+pregunta_precio = float(input("Ingrese el precio: "))
+calculo_producto(pregunta_nombre, pregunta_cantidad, pregunta_precio)
+
+
