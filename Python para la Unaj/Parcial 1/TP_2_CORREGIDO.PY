@@ -52,5 +52,3 @@ pregunta_cantidad_4 = int(input("Ingrese la cantidad: "))
 pregunta_precio_4 = float(input("Ingrese el precio: "))
 calculo_producto(pregunta_nombre_4, pregunta_cantidad_4, pregunta_precio_4)
 
-
-#Resolver el mismo ejercicio pero ahora use listas o tuplas de acuerdo a su criterio. Recordar las diferentes formas de agregar elementos en una lista.
