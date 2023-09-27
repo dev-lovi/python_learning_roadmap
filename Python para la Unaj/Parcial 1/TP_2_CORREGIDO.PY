@@ -16,13 +16,41 @@
 
 def calculo_producto(nombre, cantidad, precio):
     total = cantidad * precio
-    respuesta = print("Nombre: " + str(nombre) + " Precio: " + str(precio) + " Total gastado: " + str(total))
-    return respuesta
+    inicial = nombre[0]
+    ultima = nombre[-1]
+    print("Productos comprados:")
+    print("El nombre del producto es: " + str(nombre) + ". El precio es: $" + str(precio) + ". El total gastado es: $" + str(total))
+    print("La inicial es " + str(inicial) + " y la ultima letra es " + str(ultima))
+    print("\nLos tipos de variables son: ")
+    print("Nombre: " + str(type(nombre)))
+    print("Cantidad: " + str(type(cantidad)))
+    print("Precio: " + str(type(precio)))
+    print("Total: " + str(type(total)))
+    if total >= 5000:
+        print("El total supera los $5.000 pesos.")
+    else:
+        print("El total es menor que $5.000 pesos.")
 
 
-pregunta_nombre = input("Ingrese el nombre del producto: ")
+pregunta_nombre = input("\nIngrese el nombre del producto: ")
 pregunta_cantidad = int(input("Ingrese la cantidad: "))
 pregunta_precio = float(input("Ingrese el precio: "))
 calculo_producto(pregunta_nombre, pregunta_cantidad, pregunta_precio)
 
+pregunta_nombre_2 = input("\nIngrese el nombre del producto: ")
+pregunta_cantidad_2 = int(input("Ingrese la cantidad: "))
+pregunta_precio_2 = float(input("Ingrese el precio: "))
+calculo_producto(pregunta_nombre_2, pregunta_cantidad_2, pregunta_precio_2)
 
+pregunta_nombre_3 = input("\nIngrese el nombre del producto: ")
+pregunta_cantidad_3 = int(input("Ingrese la cantidad: "))
+pregunta_precio_3 = float(input("Ingrese el precio: "))
+calculo_producto(pregunta_nombre_3, pregunta_cantidad_3, pregunta_precio_3)
+
+pregunta_nombre_4 = input("\nIngrese el nombre del producto: ")
+pregunta_cantidad_4 = int(input("Ingrese la cantidad: "))
+pregunta_precio_4 = float(input("Ingrese el precio: "))
+calculo_producto(pregunta_nombre_4, pregunta_cantidad_4, pregunta_precio_4)
+
+
+#Resolver el mismo ejercicio pero ahora use listas o tuplas de acuerdo a su criterio. Recordar las diferentes formas de agregar elementos en una lista.
