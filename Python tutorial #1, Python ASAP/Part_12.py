@@ -29,3 +29,5 @@ elif pregunta == 'sí':
 else:
     print('ERROR 404')
 
+
+#esto vimos hoy en clase 
