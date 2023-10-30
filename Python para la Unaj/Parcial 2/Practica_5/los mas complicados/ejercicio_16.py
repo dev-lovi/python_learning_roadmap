@@ -24,7 +24,7 @@ while True:
     print("\nMenu de opciones papá")
     print("1. Convertir a dolar")
     print("2. Convertir a euro")
-    print("3, Convertir a real")
+    print("3. Convertir a real")
     print("4. Salir")
 
     pregunta = int(input("Elegí una opción: "))
