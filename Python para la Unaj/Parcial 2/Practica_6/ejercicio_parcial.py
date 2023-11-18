@@ -7,11 +7,11 @@
 #información del mismo.
 
 def agregar_curso(valor_lista):
-    condicion = 1
-    while condicion != 0:
+    condicion = 'b'
+    while condicion != 'aaa':
         nombre = input("Ingresar nombre del curso, 'aaa' para salir: ")
         if nombre == 'aaa':
-            condicion = 0
+            condicion = 'aaa'
         else:
             cant_clases = int(input("Ingresar la cantidad de clases: "))
             dia_dictado = input("Ingresar dia de dictado: ")
@@ -118,7 +118,7 @@ def letra_buscar(valor_lista):
 #Menu Principal
 
 x = []
-agregar_curso(x)
+#agregar_curso(x)
 
 
 condicion_menu = 5
@@ -138,7 +138,7 @@ while condicion_menu != 0:
     if pregunta == 7:
         condicion_menu = 0
     elif pregunta == 1:
-        print("hola")
+        agregar_curso(x)
     elif pregunta == 2:
         a = curso_5_clases(x)
         print(a)

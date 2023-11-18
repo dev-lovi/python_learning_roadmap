@@ -1,0 +1,5 @@
+Harry Potter 1, J.K Rowling, Fantasia, Disponible, 5
+Harry Potter 2, J.K Rowling, Fantasia, Prestado, 1
+Wizard and glass, Stephen King, Terror, Prestado, 1
+Dreamcatcher, Stephen King, Terror, Disponible, 3
+
