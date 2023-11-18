@@ -1,3 +1,15 @@
-IT (eso),Stephen King,Terror,Disponible,3
-Harry Potter 1,J.K Rowling,Fantasia,Prestado,2
-Harry Potter 2,J.K Rowling,Fantasia,Disponible,3
+IT,Stephen King,Terror,Disponible,0001
+IT,Stephen King,Terror,Disponible,0002
+Harry Potter 1,J.K Rowling,Fantasia,Prestado,0003
+Harry Potter 1,J.K Rowling,Fantasia,Disponible,0004
+Harry Potter 1,J.K Rowling,Fantasia,Prestado,0005
+Harry Potter 1,J.K Rowling,Fantasia,Disponible,0006
+Harry Potter 2,J.K Rowling,Fantasia,Disponible,0007
+Harry Potter 2,J.K Rowling,Fantasia,Disponible,0008
+Rayuela,Julio Cortazar,Novela,Prestado,0009
+Rayuela,Julio Cortazar,Novela,Disponible,0010
+The waste lands,Stephen king,Terror,Prestado,0011
+Undercover,Donald goddard,Policial,Disponible,0034
+Overcoming Gravity,Stephen low,Deportes,Disponible,0324
+Martin Fierro,Jose hernandez,Poema,Disponible,1343
+La sirenita,Disney,Infantil,Disponible,3920
