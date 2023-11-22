@@ -1,9 +1,9 @@
-#Sistema de Gestión de Libros en una Biblioteca:
+#Sistema de Gestión de Libros en una Biblioteca.
 
 #PUNTO 1. Carga de datos en una lista a partir de un archivo o descarga de datos a un archivo. Este punto es para que el alumno pueda investigar libremente.
 
 #Para cargar y guardar datos de libros en un archivo.
-def cargar_libros(archivo):
+def cargar_archivo(archivo):
     libros = []
     #Como el enunciado indicaba, este punto es para que el alumno pueda investigar libremente.
     #Encontré el metodo 'with' para abrir archivos en python, entre sus comandos, use r para lectura y a para escritura
@@ -15,7 +15,9 @@ def cargar_libros(archivo):
                 libro_actual = [valor.strip() for valor in line.split(',')]
                 libros.append(libro_actual)
     return libros
-
+# Ejemplo de uso (se carga primero el archivo)
+#libros = cargar_archivo(ruta_archivo)
+#print(libros)
 
 def agregar_libro(archivo):
     with open(archivo, 'a') as file:
@@ -37,13 +39,27 @@ def agregar_libro(archivo):
                 file.write(titulo + ',' + autor + ',' + genero + ',' + estado + ',' + n_inventario + '\n')
                 print("Libro agregado exitosamente.")
 
+#Esta función me agrega a mi archivo txt una lista de listas, permitiendome moverme dentro de la lista de esta forma
+#lista_de_listas = [
+ #   [1, 2, 3],
+  #  ['a', 'b', 'c'],
+   # [True, False, True]
+#]
 
-# Ejemplo de uso
-#libros = cargar_libros(ruta_archivo)
-#print(libros)
+# Acceso a elementos individuales
+#print(lista_de_listas[0])        Imprime: [1, 2, 3]
+#print(lista_de_listas[1][1])     Imprime: b
+#print(lista_de_listas[2][2])     Imprime: True
+
+#Ejemplo de uso:
+#ruta_archivo = 'datos.txt' #acá pongo el nombre del archivo (un bloc de notas vacio)
+#agregar_libro(ruta_archivo)
+
+
+
 
 # PUNTO 2. Incluir funciones que realicen una tarea
-#Imprimir libros prestados/disponible 
+#Imprimir libros prestados/disponibles 
 def estado(archivo):
     estado_elegido = input("¿Qué estado desea consultar? (Disponible/Prestado): ").capitalize()
     estado_lista = []
@@ -56,10 +72,12 @@ def estado(archivo):
         print("No se encuentra en los documentos.")                
     return estado_lista
 
-#archivos = estado(libros)
+#Esta función compara el input con el valor 3 de la lista, de cumplirse la condición, muestra en una lista el nombre del libro y el numero de articulo.
+#Ejemplo de uso
+#archivos = estado(libros) => ya que en la variable libros tengo cargado mi txt
 #print(archivos)
 
-# PUNTO 2. Incluir funciones que realicen una tarea
+# PUNTO 2. 
 #Funciones para imprimir libros por N° de articulo.
 def articulo(archivo):
     articulo_elegido = input("¿Qué N° de articulo? Formato XXXX: ")
@@ -72,6 +90,7 @@ def articulo(archivo):
         print("No se encuentra en los documentos.")                
     return articulo_lista
 
+#Funcionamiento similar a la anterior funcion, solo que en este caso me devuelve todos los datos del libro
 #archivos = articulo(libros)
 #print(archivos)
 
@@ -84,6 +103,11 @@ def total_libros(archivo):
         total += 1
     rta = str("El total de libros es " + str(total))
     return rta
+
+#esta función le suma a la varible total 1 punto por cada elemento en mi lista
+#me devuelve el valor de la varible total,es decir, el numero de libros de mi biblioteca
+
+#Ejemplo de uso:
 #archivos = total_libros(libros)
 #print(archivos)
 
@@ -105,6 +129,9 @@ def cantidad_nombre(archivo):
     resultado = str("La cantidad es " + str(cantidad) + " , con los siguientes datos: " + str(libro_lista))
     return resultado
 
+#Esta funcion compara el input ingresado con el nombre del libro, de ser así, me devuelve la disponibilidad y el numero de inventario de todos los libros con ese nombre (ya que en la biblioteca pueden existir copias de los ejemplares)
+
+#Ejemplo de uso:
 #archivos = cantidad_nombre(libros)
 #print(archivos)
 
@@ -126,6 +153,9 @@ def cantidad_genero(archivo):
     resultado = str("La cantidad es " + str(cantidad) + " , con los siguientes datos: " + str(genero_lista))
     return resultado
 
+#Esta funcion compara el input con el genero en la biblioteca y me devuelve el nombre, estado y numero de inventario de todos los libros que comparten el genero.
+
+#Ejemplo de uso:
 #archivos = cantidad_genero(libros)
 #print(archivos)
 
@@ -147,10 +177,14 @@ def stock(archivo):
     # Si no se encuentra el libro o no está disponible
     return False
 
+#Cuando agregamos un libro, podemos poner su estado en Disponible o Prestado, en este caso, si el libro esta disponible me devuelve True y en caso contrario False. Lo que hace la funcion es pedirle al usuario el nombre del libro y comparar el string 'Disponible' con el valor 3 de la lista, de coincidir, indica que ese libro está Disponbile.
+
+#Ejemplo de uso:
 #archivos = stock(libros)
 #print(archivos)
 
 
+#PUNTO 6. Retornar el elemento que sea máximo o mínimo para algún valor. 
 #Retornar el libro con la mayor cantidad de ejemplares.
 def libro_max(archivo):
     conteo_libros = {} #iniciamos diccionario
@@ -172,12 +206,15 @@ def libro_max(archivo):
     a = str("El libro mas repetido es " + str(libro_mas_repetido) + " con " + str(max_repetido) + " ejemplares.")
     return a
 
+#Lo que hace esta funcion es iniciar una comparacion entre todos los valores 0 de las listas (nombre). Si el nombre se repite, suma 1 a la variable max_repetido y lo agrega el diccionario. Despues de recorrer toda la lista, me devuelve el nombre del libro con mayor valor en la variable max_repetido
 
+
+#Ejemplo de uso:
 #archivos = libro_max(libros)
 #print(archivos)
 
 
-
+#PUNTO 7. Retornar el promedio de algún valor.
 #Retornar el promedio de ejemplares existentes en la biblioteca.
 def promedio(archivo):
     print("Tenga en cuenta que este programa solo toma en cuenta libros disponibles")
@@ -205,19 +242,26 @@ def promedio(archivo):
     rta = str("El promedio  del libro " + str(pregunta) + " es de " + str(calculo) + "% con un total de " + str(cantidad_elegida) + " ejemplares.")
     return rta
 
+#Esta funcion compara el nombre de un libro y me indica si esta disponible, similar a una funcion anterior.
+#Si el libro esta disponible, lo almacena en una lista y sigue buscando si existen mas ejemplares en la biblioteca.
+#Ademas, hace otra lista con TODOS los libros disponibles
+#Finalmente, calcula el promedio entre el libro elegido y el total y lo devuelve.
+
+#Ejemplo de uso:
 #archivos = promedio(libros)
 #print(archivos)
 
 
 
 #CONSTRUCCION DEL MENU
+#Ponemos una condición para salir del menu
 
 print("Bienvenido: ")
 print("Gestion de biblioteca")
 
-menu_condicion = 'c'
+menu_condicion = 'c' #condicion
 
-while menu_condicion != 'x':
+while menu_condicion != 'x': #mientras mi condicion sea distinta de x, ejecutar el while (mi condicion inicialmente vale c)
     print("\nMenu de opciones")
     print("1. Mostrar lista completa de libros")
     print("2. Agregar libros")
@@ -228,17 +272,19 @@ while menu_condicion != 'x':
     print("7. Retornar la cantidad de libros por genero")
     print("8. Verificar la existencia de un libro en la biblioteca")
     print("9. Mostrar libro con mayor cantidad de ejemplares")
-    print("10. Mostrar promedio de un libro")
+    print("10. Mostrar promedio de un libro (respecto al stock disponible)")
     print("11. SALIR")
     
+
+    #antes de implementar las funciones, cargo el bloc de notas para poder trabajar en forma de lista
     #Cargar archivo
     ruta_archivo = 'datos.txt' #(un bloc de notas)
-    libros = cargar_libros(ruta_archivo)
+    libros = cargar_archivo(ruta_archivo)
     
     pregunta = int(input("\nElija una opción: "))
     
     if pregunta == 11:
-        menu_condicion = 'x'
+        menu_condicion = 'x' #si elijo la opcion 11. Salir, cambio la condicion a x, causando que el while se rompa
     
     elif pregunta == 1:
         print("Opción elegida: Mostrar lista completa de libros")
