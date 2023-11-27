@@ -54,11 +54,18 @@ def inventario_nashe(lista, pregunta):
 
 def altura_arbol(lista):
     lista_altura_arbol = []
+    altura = 0
 
     for arboles in lista:
         if arboles[2] > 5 and arboles[3] == 'PINO':
+            altura += arboles[4]
+            lista_altura_arbol.append(arboles)
+    
 
+    cantidad = len(lista_altura_arbol)
+    calculo = altura / cantidad
+    print("El promedio es" + str(calculo))
 
-
+altura_arbol(x)
 
 

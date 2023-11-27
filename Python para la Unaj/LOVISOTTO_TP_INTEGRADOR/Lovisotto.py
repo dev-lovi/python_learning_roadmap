@@ -284,7 +284,7 @@ while menu_condicion != 'x': #mientras mi condicion sea distinta de x, ejecutar 
     pregunta = int(input("\nElija una opción: "))
     
     if pregunta == 11:
-        menu_condicion = 'x' #si elijo la opcion 11. Salir, cambio la condicion a x, causando que el while se rompa
+        menu_condicion = 'x' #si elijo la opcion 11. Salir, cambio la condicion a x, causando que el while se rompa.
     
     elif pregunta == 1:
         print("Opción elegida: Mostrar lista completa de libros")
