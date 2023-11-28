@@ -33,7 +33,7 @@ def agregar_libro(archivo):
                 autor = input("Ingrese el nombre del autor: ").capitalize()
                 genero = input("Ingrese el género del libro: ").capitalize()
                 estado = input("Ingrese el estado del libro (Disponible/Prestado): ").capitalize()
-                n_inventario = input("Ingrese el N° de inventario en el formato XXXX: ")
+                n_inventario = (input("Ingrese el N° de inventario en el formato XXXX: "))
 
             # Escribir los datos en el archivo
                 file.write(titulo + ',' + autor + ',' + genero + ',' + estado + ',' + n_inventario + '\n')
@@ -160,6 +160,20 @@ def cantidad_genero(archivo):
 #print(archivos)
 
 
+#Punto de profe
+
+
+def n_articulo(archivo):
+    condicion = (int(input("Elija un rango en el formato XXXX:")))
+    articulo_lista = []
+
+    for libro in range(0000, condicion) in archivo:
+        if libro[4] == condicion:
+            articulo_lista.append(libro)             
+    return articulo_lista
+
+
+
 
 # PUNTO 5. Incluir consultas que retornan un valor booleano
 #Consultas booleanas para verificar la existencia de un libro en la biblioteca.
@@ -205,6 +219,22 @@ def libro_max(archivo):
     
     a = str("El libro mas repetido es " + str(libro_mas_repetido) + " con " + str(max_repetido) + " ejemplares.")
     return a
+
+
+#PUNTO 55. 
+def punto_profe(archivo):
+    libro_elegido = input("Ingrese el nombre del libro: ")
+    libro_lista = []
+
+    for libro in archivo:
+        if libro[0] == libro_elegido:
+            libros_dato =  [libro[0], libro[3], libro[4]]
+            libro_lista.append(libros_dato)
+        
+    
+    cantidad = len(libro_lista)
+    resultado = str("La cantidad es " + str(cantidad) + " , con los siguientes datos: " + str(libro_lista))
+    return resultado
 
 #Lo que hace esta funcion es iniciar una comparacion entre todos los valores 0 de las listas (nombre). Si el nombre se repite, suma 1 a la variable max_repetido y lo agrega el diccionario. Despues de recorrer toda la lista, me devuelve el nombre del libro con mayor valor en la variable max_repetido
 
@@ -273,6 +303,7 @@ while menu_condicion != 'x': #mientras mi condicion sea distinta de x, ejecutar 
     print("8. Verificar la existencia de un libro en la biblioteca")
     print("9. Mostrar libro con mayor cantidad de ejemplares")
     print("10. Mostrar promedio de un libro (respecto al stock disponible)")
+    print("55 condicion profe")
     print("11. SALIR")
     
 
@@ -334,5 +365,10 @@ while menu_condicion != 'x': #mientras mi condicion sea distinta de x, ejecutar 
     elif pregunta == 10:
         print("Opción elegida: Mostrar promedio de un libro")
         archivos = promedio(libros)
+        print(archivos)
+
+    elif pregunta == 55:
+        print("Retorno cant libros por nombre")
+        archivos = punto_profe(libros)
         print(archivos)
 
