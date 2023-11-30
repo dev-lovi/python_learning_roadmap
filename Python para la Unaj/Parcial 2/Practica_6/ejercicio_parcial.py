@@ -159,3 +159,8 @@ while condicion_menu != 0:
         pregunta = (int(input("Ingrese una opcion: ")))
 
 #
+
+
+
+
+

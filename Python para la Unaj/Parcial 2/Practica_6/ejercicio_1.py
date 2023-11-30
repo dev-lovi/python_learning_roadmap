@@ -50,27 +50,24 @@ def vocales(valor):
 #print(f)
 
 
-condicion = "zzz"
+condicion = 0
 print("Menu")
 print("1. Funcion 1")
 print("2. Funcion 2")
 print("3. Funcion 3")
 print("4. Salir")
 
-while condicion != "zzz":
+while condicion != 4:
     pregunta = int(input("Elija una opcion: "))
-    if pregunta == 1:
-        a = input("Ingresa una palabra: ")
-        x = mi_funcion(a)
-        print(str(a) + " -> " + str(x))
+    if pregunta == 4:
+        condicion = 4 #deja de cumplir la condicion, se sale
+    elif pregunta == 1:
+        #invocacion funcion 1
+        print("hola")
     elif pregunta == 2:
-        lista = []
-        a = punto_b(lista)
+        print("hola")
+        #invocacion funcion 1
     elif pregunta == 3:
-        f = vocales(a)
-        print(f)
-    elif pregunta == 4:
-        condicion == "zzz"
-    else:
-        print("Error")
-pregunta = int(input("Elija una opcion: "))
+        print("hola")
+        #invocacion funcion 1
+

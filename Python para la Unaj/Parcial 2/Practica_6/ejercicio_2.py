@@ -92,3 +92,5 @@ contraseñas_validas = controlar_clave(x)
 print("Los datos de los alumnos con contraseñas válidas son:")
 for alumno in contraseñas_validas:
     imprimir_alumno(alumno)
+
+

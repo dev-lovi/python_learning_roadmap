@@ -1,15 +1,13 @@
 def datoscorreo():
     lista = []
-    print("Cuando ingrese fin se cierra el programa")
-    destinatario = input("Ingrese destinatario: ")
-    finaliza = "fin"
-    while destinatario != finaliza:
+    destinatario = input("Ingrese destinatario, ponga 'fin' para salir: ") #condicion
+    while destinatario != 'fin': #ingreso al bucle
         remitente = input("Ingrese remitente: ")
         cp = int(input("Ingrese cp de entrega: "))
         peso = float(input("Ingrese peso del paquete: "))
         paquete = [remitente,destinatario,cp,peso]
         lista.append(paquete)
-        destinatario = input("Ingrese destinatario: ")
+        destinatario = input("Ingrese destinatario, ponga 'fin' para salir: ") #repito la condicion
     return lista
 
 x = datoscorreo()
@@ -25,4 +23,4 @@ def maspeso(a):
 
 
 
-maspeso(x)
+#maspeso(x)
