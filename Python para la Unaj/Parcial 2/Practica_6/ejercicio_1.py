@@ -57,7 +57,7 @@ print("2. Funcion 2")
 print("3. Funcion 3")
 print("4. Salir")
 
-while condicion != 4:
+while condicion != 4: #ultimo dia de repaso
     pregunta = int(input("Elija una opcion: "))
     if pregunta == 4:
         condicion = 4 #deja de cumplir la condicion, se sale
