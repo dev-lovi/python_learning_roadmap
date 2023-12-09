@@ -34,22 +34,21 @@ def agregar():
 
     return lista
 
-#a = agregar()
+a = agregar()
 #print(a)
 
 
-def buscar_tipo(lista):
+def buscar_tipo(lista, pregunta_tipo):
     lista_tipo = []
-
-    pregunta_tipo = input("Ingrese el tipo (galletitas, bebidas, golosinas): ").lower()
 
     for productos in lista:
         if productos[1] == pregunta_tipo:
             lista_tipo.append(productos)
     return lista_tipo
 
-#b = buscar_tipo(a)
-#print(b)
+x = input("Ingrese el tipo (galletitas, bebidas, golosinas): ")
+b = buscar_tipo(a, x)
+print(b)
 
 
 
@@ -78,10 +77,8 @@ def mostrar_productos_precio_y_refri(lista):
 #d = mostrar_productos_precio_y_refri(a)
 #print(d)
 
-def def_codigo_y_marca(lista):
+def def_codigo_y_marca(lista, marca):
     lista_codigo_y_marca = []
-
-    marca = input("Ingrese la marca: ").lower()
 
     for productos in lista:
         if productos[2] == marca:
@@ -90,7 +87,8 @@ def def_codigo_y_marca(lista):
 
     return lista_codigo_y_marca
 
-#e = def_codigo_y_marca(a)
+#x = input("Ingrese la marca: ").lower()
+#e = def_codigo_y_marca(a, x)
 #print(e)
 
 
@@ -112,8 +110,10 @@ while condicion == 'a':
         condicion = 'b'
 
     elif pregunta == 1:
-        b = buscar_tipo(a)
+        x = input("Ingrese el tipo (galletitas, bebidas, golosinas): ")
+        b = buscar_tipo(a, x)
         print(b)
+
 
     elif pregunta == 2:
         c = stock_cero(a)
@@ -124,5 +124,6 @@ while condicion == 'a':
         print(d)
 
     elif pregunta == 4:
-        e = def_codigo_y_marca(a)
+        x = input("Ingrese la marca: ").lower()
+        e = def_codigo_y_marca(a, x)
         print(e)
