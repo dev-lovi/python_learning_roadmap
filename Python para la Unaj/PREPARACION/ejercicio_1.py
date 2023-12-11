@@ -15,40 +15,44 @@ Funciones
 
 '''
 
-def agregar():
+
+def cargar_datos():
     lista = []
 
-    codigo = int(input("Ingrese el codigo, '000' para salir: "))
+    codigo = int(input("Ingrese el codigo, ponga '000' para salir: "))
 
     while codigo != 000:
-        tipo = input("Ingrese el tipo (galletitas, bebidas, golosinas): ").lower()
-        marca = input("Ingrese la marca: ").lower()
+        tipo = input("Ingrese el tipo (galletas, bebidas, golosinas): ")
+        marca = input("Ingrese la marca: ")
         precio = int(input("Ingrese el precio: "))
         stock = int(input("Ingrese el stock: "))
-        refrigeracion = input("Refrigeración True/False: ").lower()
+        refrigeracion = input("Refrigeracion True/False: ").lower() 
 
         total = [codigo, tipo, marca, precio, stock, refrigeracion]
         lista.append(total)
 
-        codigo = int(input("Ingrese el codigo, '000' para salir: "))
+        codigo = int(input("Ingrese el codigo, ponga '000' para salir: "))
 
     return lista
 
-a = agregar()
+a = cargar_datos()
 #print(a)
 
 
-def buscar_tipo(lista, pregunta_tipo):
+def buscar_tipo(lista, tipo_usuario):
     lista_tipo = []
 
     for productos in lista:
-        if productos[1] == pregunta_tipo:
+        if productos[1] == tipo_usuario:
             lista_tipo.append(productos)
+
     return lista_tipo
 
-x = input("Ingrese el tipo (galletitas, bebidas, golosinas): ")
-b = buscar_tipo(a, x)
-print(b)
+
+#input_tipo_usuario = input("Ingrese el tipo (galletas, bebidas, golosinas): ")
+#b = buscar_tipo(a, input_tipo_usuario )
+#print(b)
+
 
 
 
@@ -61,69 +65,156 @@ def stock_cero(lista):
 
     return lista_stock
 
-
 #c = stock_cero(a)
 #print(c)
 
-def mostrar_productos_precio_y_refri(lista):
-    lista_precio_refri = []
+
+def precio_true(lista):
+    lista_precio_true = []
 
     for productos in lista:
-        if productos[3] >= 650 and productos[5] == 'true':
-            lista_precio_refri.append(productos)
+        if productos[3] > 650 and productos[5] == 'true':
+            lista_precio_true.append(productos)
 
-    return lista_precio_refri
+    return lista_precio_true
 
-#d = mostrar_productos_precio_y_refri(a)
+#d = precio_true(a)
 #print(d)
 
-def def_codigo_y_marca(lista, marca):
-    lista_codigo_y_marca = []
+
+def buscar_marca(lista, input_marca):
+    lista_marca = []
 
     for productos in lista:
-        if productos[2] == marca:
-            pedido = [productos[0], productos[1]]
-            lista_codigo_y_marca.append(pedido)
+        if productos[2] == input_marca:
+            total = [productos[0], productos[1]]
+            lista_marca.append(total)
 
-    return lista_codigo_y_marca
+    return lista_marca
 
-#x = input("Ingrese la marca: ").lower()
-#e = def_codigo_y_marca(a, x)
+#x = input("Ingrese la marca: ")
+#e = buscar_marca(a, x)
 #print(e)
 
 
-a = agregar()
 
-condicion = 'a'
+#AGREGAMOS 3 FUNCIONES MÁS
 
-while condicion == 'a':
-    print("Menu de opciones")
-    print("1. Mostrar la lista de productos con sus respectivos precios de un tipo específico.")
-    print("2. Listar los productos del kiosco que tienen un stock de 0.")
-    print("3. Mostrar los productos cuyo precio supera los 650 pesos y que requieren refrigeración.")
-    print("4. Listar el código del producto y el tipo de una marca determinada.")
-    print("5. Salir")
+#FUNCION 5
+#PROMEDIO DE PRECIO (el usuario ingresa el tipo (galletitas, bebidas, etc))
 
-    pregunta = int(input("Ingrese una opción: "))
+def promedio_tipo(lista, tipo_usuario):
+    cantidad = 0
+    precio = 0
 
-    if pregunta == 5:
-        condicion = 'b'
+    for productos in lista:
+        if productos[1] == tipo_usuario:
+            cantidad += 1
+            precio += productos[3]
+    
+    promedio = precio / cantidad
+    return promedio
 
-    elif pregunta == 1:
-        x = input("Ingrese el tipo (galletitas, bebidas, golosinas): ")
-        b = buscar_tipo(a, x)
+
+#x = input("Ingrese el tipo (galletas, bebidas, golosinas): ")
+#f = promedio_tipo(a, x)
+#print(f)
+
+            
+    
+
+#FUNCION 6
+#EL PRODUCTO MAS CARO DE TOOODO MI CATALOGO
+ 
+def el_mas_caro(lista):
+
+    precio_inicial = 0
+    producto_caro = "a"
+
+    for productos in lista:
+        if productos[3] > precio_inicial:
+            precio_inicial = productos[3]
+            producto_caro = productos
+
+    return producto_caro
+
+
+#g = el_mas_caro(a)
+#print(g)
+
+
+#FUNCION 7
+#BUSCAR POR LETRA DE MARCA
+
+def buscar_letra(lista, input_usuario):
+
+    lista_letra = []
+
+    for productos in lista:
+        if productos[2][0] == input_usuario:
+            lista_letra.append(productos)
+
+    return lista_letra
+
+#x = input("Ingresa una letra: ")
+#h = buscar_letra(a, x)
+#print(h)
+
+
+
+
+
+a = cargar_datos()
+
+print("Programa para administrar un kiosco en Florencio Varela")
+print("Menu de opciones")
+print("1. Mostrar la lista de productos por tipo.")
+print("2. Listar los productos del kiosco que tienen un stock de 0.")
+print("3. Precio supera los 650 pesos y que requieren refrigeración.")
+print("4. Listar el código del producto y el tipo de una marca determinada.")
+print("5. PROMEDIO DE PRECIO (el usuario ingresa el tipo (galletitas, bebidas, etc)).")
+print("6. EL PRODUCTO MAS CARO DE TOOODO MI CATALOGO.")
+print("7. BUSCAR POR LETRA DE MARCA.")
+print("8. Salir")
+
+pregunta = int(input("Elija una opcion: "))
+
+while pregunta != 8:
+
+    if pregunta == 1:
+        input_tipo_usuario = input("Ingrese el tipo (galletas, bebidas, golosinas): ")
+        b = buscar_tipo(a, input_tipo_usuario )
         print(b)
-
 
     elif pregunta == 2:
         c = stock_cero(a)
         print(c)
 
     elif pregunta == 3:
-        d = mostrar_productos_precio_y_refri(a)
+        d = precio_true(a)
         print(d)
 
     elif pregunta == 4:
-        x = input("Ingrese la marca: ").lower()
-        e = def_codigo_y_marca(a, x)
+        x = input("Ingrese la marca: ")
+        e = buscar_marca(a, x)
         print(e)
+
+    elif pregunta == 5:
+        x = input("Ingrese el tipo (galletas, bebidas, golosinas): ")
+        f = promedio_tipo(a, x)
+        print(f)
+
+
+    elif pregunta == 6:
+        print("funcion 6")
+
+    elif pregunta == 7:
+        print("funcion 7")
+
+    else:
+        print("Opcion incorrecta")
+    
+    pregunta = int(input("Elija una opcion: "))
+    
+
+
